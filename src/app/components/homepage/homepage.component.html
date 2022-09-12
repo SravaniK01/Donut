@@ -1,0 +1,5 @@
+<h2>Donuts</h2>
+
+<ul *ngFor="let l of donutList.results">
+    <li><a [routerLink]="['/donutList', l.id]">{{l.name}}</a></li>
+</ul>

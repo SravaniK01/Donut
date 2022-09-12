@@ -1,0 +1,38 @@
+<div *ngIf="donutDetail">
+<div>
+    <h2>Donut</h2> 
+    <span> <button (click)="addToCart()">Add to Cart</button></span>
+ </div>
+
+<table>
+    <tbody>
+        <tr>
+            <td>Name : {{donutDetail.name}} </td>
+        </tr>
+        <tr>
+            <td>Calories : {{donutDetail.calories}} </td>
+        </tr>
+        <tr >
+            <td>Extras :
+                <ul *ngFor="let l of donutDetail.extras">
+                    <li> {{l}} </li>
+                </ul>
+            </td>
+            
+        </tr>
+        <tr>
+            
+            <td>
+                <img src = "{{donutDetail.photo}}" alt="No Image" width="250" height="250" />
+            </td>
+            
+        </tr>
+        <tr>
+            <td>
+                photo_attribution: <a href="{{donutDetail.photo_attribution}}">{{donutDetail.photo_attribution}}</a>
+            </td>
+        </tr>
+
+    </tbody>
+</table>
+</div>
